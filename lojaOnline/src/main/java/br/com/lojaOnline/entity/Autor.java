@@ -21,6 +21,7 @@ public class Autor implements Serializable {
 	private Long idAutor;
 	private static final long serialVersionUID = 1L;
 	
+	
 	@Column(name = "NOME")
 	private String nome;
 	
