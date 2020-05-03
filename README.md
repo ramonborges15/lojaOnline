@@ -5,5 +5,7 @@ Esse projeto tem como objetivo criar uma loja online utilizando algumas especifi
 1. JavaServer Faces
 2. Java Persistence API
 3. Contexts and Dependency Injection
+4. Application Server: Wildfly 10.
+5. MariaDB.
 
 Utilizo o servidor de aplicação Wildfly, e o JBoss Forge para criação de algumas configurações iniciais.
