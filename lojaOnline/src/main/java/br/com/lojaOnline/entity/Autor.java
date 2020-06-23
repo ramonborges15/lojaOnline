@@ -15,11 +15,12 @@ import javax.persistence.Table;
 @Table(name = "AUTOR")
 public class Autor implements Serializable {
 
+	private static final long serialVersionUID = 1L;
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "ID_AUTOR", nullable = false)
 	private Long idAutor;
-	private static final long serialVersionUID = 1L;
 	
 	@Column(name = "NOME")
 	private String nome;
@@ -27,6 +28,10 @@ public class Autor implements Serializable {
 	@ManyToMany(mappedBy = "autores")
 	private List<Livro> livros;
 
+	public Autor() {
+		
+	}
+	
 	/*
 	 * ---------------------------
 	 * Getters and Setters

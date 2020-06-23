@@ -4,7 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:p="http://primefaces.org/ui">
+	xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
 <h:body>
 	<ui:composition template="../Layout.xhtml">
 
@@ -19,7 +20,8 @@
 					
 					<br/>
 					
-					<h:commandButton id="salvar" value="Salvar" action="#{autorBean.salvarAutor}"/>
+					<h:commandButton id="salvar" value="Salvar" action="#{autorBean.salvarAutor}" />
+					
 				</p:panelGrid>
 
 			</h:form>

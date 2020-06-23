@@ -1,6 +1,7 @@
 package br.com.lojaOnline.beans;
 
-import javax.faces.bean.ViewScoped;
+
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -9,7 +10,7 @@ import org.atteo.moonshine.jta.Transactional;
 import br.com.lojaOnline.dao.AutorDAO;
 import br.com.lojaOnline.entity.Autor;
 
-@ViewScoped
+@RequestScoped //import javax.enterprise.context.RequestScoped;
 @Named(value="autorBean")
 public class AutorBean {
 	
