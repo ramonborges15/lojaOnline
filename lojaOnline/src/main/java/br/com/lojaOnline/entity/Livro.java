@@ -7,6 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import java.io.Serializable;
+import java.util.LinkedList;
 import java.util.List;
 
 import javax.persistence.Table;
@@ -20,32 +21,34 @@ public class Livro implements Serializable {
 	@Column(name = "ID_LAUDO", nullable = false)
 	private Long idLivro;
 	private static final long serialVersionUID = 1L;
-	
+
 	@Column(name = "NOME")
 	private String nome;
 
 	@Column(name = "PRECO")
 	private Float preco;
-	
+
 	@Column(name = "QUANTIDADE_PAGINAS")
 	private Integer quantidadePaginas;
 
 	@Column(name = "DESCRICAO_LIVRO")
 	private String descricaoLivro;
-	
+
 	@Column(name = "ANO_PUBLICACAO")
 	private Integer anoPublicacao;
 
 	@ManyToMany
 	private List<Autor> autores;
-	
-	
-	/* 
-	 * ----------------------------------
-	 * Getters and Setters
+
+	public Livro() {
+		this.autores = new LinkedList<Autor>();
+	}
+
+	/*
+	 * ---------------------------------- Getters and Setters
 	 * ----------------------------------
 	 */
-	
+
 	public Float getPreco() {
 		return preco;
 	}
@@ -53,7 +56,7 @@ public class Livro implements Serializable {
 	public void setPreco(Float preco) {
 		this.preco = preco;
 	}
-	
+
 	public String getNome() {
 		return nome;
 	}
@@ -61,7 +64,7 @@ public class Livro implements Serializable {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
+
 	public Integer getQuantidadePaginas() {
 		return quantidadePaginas;
 	}
@@ -69,7 +72,7 @@ public class Livro implements Serializable {
 	public void setQuantidadePaginas(Integer quantidadePaginas) {
 		this.quantidadePaginas = quantidadePaginas;
 	}
-	
+
 	public Integer getAnoPublicacao() {
 		return anoPublicacao;
 	}
@@ -77,7 +80,7 @@ public class Livro implements Serializable {
 	public void setAnoPublicacao(Integer anoPublicacao) {
 		this.anoPublicacao = anoPublicacao;
 	}
-	
+
 	public String getDescricaoLivro() {
 		return descricaoLivro;
 	}
@@ -85,7 +88,7 @@ public class Livro implements Serializable {
 	public void setDescricaoLivro(String descricaoLivro) {
 		this.descricaoLivro = descricaoLivro;
 	}
-	
+
 	public List<Autor> getAutores() {
 		return autores;
 	}
@@ -93,7 +96,7 @@ public class Livro implements Serializable {
 	public void setAutores(List<Autor> autores) {
 		this.autores = autores;
 	}
-	
+
 	public Long getIdLivro() {
 		return idLivro;
 	}

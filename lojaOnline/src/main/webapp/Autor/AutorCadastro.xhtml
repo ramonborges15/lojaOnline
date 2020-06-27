@@ -5,23 +5,24 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://java.sun.com/jsf/core">
+	xmlns:f="http://java.sun.com/jsf/core">
 <h:body>
 	<ui:composition template="../Layout.xhtml">
 
 		<ui:define name="content">
 			<h:form id="form">
-				
+
 				<h2>Cadastro do Autor</h2>
-				
+
 				<p:panelGrid columns="2" layout="grid">
 					<h:outputLabel id="nome" value="Nome do autor: " />
-					<h:inputText  value="#{autorBean.autor.nome}" />
-					
-					<br/>
-					
-					<h:commandButton id="salvar" value="Salvar" action="#{autorBean.salvarAutor}" />
-					
+					<h:inputText value="#{autorBean.autor.nome}" />
+
+					<br />
+
+					<h:commandButton id="salvar" value="Salvar"
+						action="#{autorBean.salvarAutor}" />
+
 				</p:panelGrid>
 
 			</h:form>
